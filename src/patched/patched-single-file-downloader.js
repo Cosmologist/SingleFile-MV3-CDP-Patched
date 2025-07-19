@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'singlefile.downloader') {
         downloadBlob(message.downloadInfo.url, message.downloadInfo.filename);
-        sendResponse({result: true});
+        sendResponse({});
     }
 });
 

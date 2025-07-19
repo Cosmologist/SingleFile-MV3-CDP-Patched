@@ -28,14 +28,14 @@ export {
 };
 
 async function download(downloadInfo, replacementCharacter) {
-    let result = new Promise();
-
-    chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-        chrome.tabs.sendMessage(
-            tabs[0].id,
-            {action: 'singlefile.downloader', downloadInfo: downloadInfo},
-            function (response) {
-                result.resolve(response);
+    let result = new Promise(function(resolve, reject) {
+        chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+            chrome.tabs.sendMessage(
+                tabs[0].id,
+                {action: 'singlefile.downloader', downloadInfo: downloadInfo},
+                function (response) {
+                    resolve(response);
+                });
         });
     });
 
