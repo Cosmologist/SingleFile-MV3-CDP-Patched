@@ -160,7 +160,7 @@ const DEFAULT_CONFIG = {
 	blockStylesheets: false,
 	blockFonts: false,
 	blockScripts: true,
-	blockVideos: true,
+	blockVideos: false,
 	blockAudios: true,
 	delayBeforeProcessing: 0,
 	_migratedTemplateFormat: true,
