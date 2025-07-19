@@ -153,17 +153,17 @@ export default [{
 		plugins: []
 	}]
 }, {
-	input: ["src/core/bg/offscreen-document.js"],
-	output: [{
-		file: "lib/single-file-extension-offscreen-document.js",
-		format: "iife",
-		plugins: []
-	}]
-}, {
 	input: ["src/lib/single-file/background.js"],
 	output: [{
 		file: "lib/single-file-background.js",
 		format: "iife",
-		plugins: []
+		plugins: [terser()]
+	}]
+}, {
+	input: ["src/patched/patched-single-file-downloader.js"],
+	output: [{
+		file: "lib/patched-single-file-downloader.js",
+		format: "iife",
+		plugins: [terser()]
 	}]
 }];

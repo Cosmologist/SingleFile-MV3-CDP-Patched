@@ -166,4 +166,11 @@ export default [{
 		format: "iife",
 		plugins: [terser()]
 	}]
+}, {
+	input: ["src/patched/patched-single-file-downloader.js"],
+	output: [{
+		file: "lib/patched-single-file-downloader.js",
+		format: "iife",
+		plugins: [terser()]
+	}]
 }];

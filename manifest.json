@@ -43,7 +43,8 @@
 			],
 			"run_at": "document_start",
 			"js": [
-				"lib/single-file-bootstrap.bundle.js"
+				"lib/single-file-bootstrap.bundle.js",
+				"lib/patched-single-file-downloader.js"
 			]
 		}
 	],
