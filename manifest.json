@@ -133,5 +133,10 @@
 	"devtools_page": "src/core/devtools/devtools.html",
 	"incognito": "spanning",
 	"manifest_version": 3,
-	"default_locale": "en"
+	"default_locale": "en",
+	"externally_connectable": {
+		"matches": [
+			"<all_urls>"
+		]
+	}
 }
